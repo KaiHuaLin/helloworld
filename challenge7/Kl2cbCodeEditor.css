@@ -1,0 +1,85 @@
+#mainBody {
+    background-color: beige
+}
+
+#wrapperDiv {
+    margin: auto;
+    width: 80%;
+    border: 10px solid #7fb97f;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#nameH1 {
+    text-align: center;
+    color: #464444;
+}
+
+#headFour {
+    text-align: center;
+    color: #464444;
+}
+
+#portfolioLink {
+    text-decoration: none;
+    color: black;
+}
+
+#cssHtmlDiv {
+    width: 48%;
+    height: 65%
+}
+
+#resultDiv {
+    background-color: white;
+    width: 48%;
+    height: 420px;
+    margin: 5px;
+    border: 2px solid black;
+    float: right;
+    box-shadow: 2px 2px 6px grey;
+    overflow: scroll
+}
+
+#cssTextArea,  #htmlTextArea{
+    width: 100%;
+    height: 200px;
+    float: left;
+    border: 2px solid #171212;
+    margin: 5px;
+    box-shadow: 2px 2px 6px grey;
+}
+
+
+#buttonDiv {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+#htmlButton, #cssButton, #eraseButton {
+    margin: 5px;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: antiquewhite;
+    box-shadow: 2px 2px 2px grey;
+    border-radius: 10px;
+    
+}
+
+#cssTextArea:focus {
+    box-shadow: 2px 2px 6px black;
+}
+
+#htmlTextArea:focus {
+    box-shadow: 2px 2px 6px black;
+}
+
+.clearhack:after {
+    content: "";
+    display: table;
+    clear: both;
+}

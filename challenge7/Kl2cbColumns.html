@@ -1,0 +1,237 @@
+<!--
+    Name: Kai Hua Lin
+    Pawprint: kl2cb
+    Date: 10/13/2019
+    Challenge: Web Servers
+-->
+
+
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>Challenge3: Multi-Column Layout</title>
+        <meta charset="utf-8">
+        
+        <style>
+            body {
+                background-image:url("image/background.png");
+                margin: 0;
+            }
+            
+            H2 {
+                text-align: center;
+                font-family: fantasy;
+            }
+            
+            #navbar {
+                background-color:beige;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                z-index: 1;
+                box-shadow: 0px 2px 10px black;
+            }
+            
+            #navbar a {
+                color: black;
+                padding: 10px;
+                font-size: 20px;
+                font-family:monospace;
+                text-decoration: none;
+                text-align: center;
+                float: left;
+                border-right: 2px solid black;
+            }
+            
+            #navbar a:hover {
+                background-color: #d1c74b;
+            }  
+            
+            #active {
+                background-color: #69632f;
+            }
+            
+            #mainDiv {
+                color: #573911;
+                background-color: #b4b4ac;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 110px;
+                width: 1092px;
+                border: 8px solid beige;
+                border-radius: 20px;
+                padding: 10px;
+                line-height: 8px;
+            }
+            
+            div ul {
+                line-height: 30px;
+                font-size: 20px;
+            }
+            
+            .leftRightColumn {
+                float: left;
+                padding: 18px;
+                margin: 18px;
+                height: 390px;
+                border: 8px solid beige;
+                border-radius: 20px;
+            }
+        
+            #leftColumn {
+                background-color: #e0b883;
+                width: 239px;
+                
+                position: relative;
+                animation-timing-function: ease;
+                animation: innerDivMove 5s;
+            } 
+            
+            #rightColumn {
+                background-color: #ffd1d9;
+                width: 209px;
+                
+                position: relative;
+                animation-timing-function: ease;
+                animation: innerDivMove 3s;
+            }
+            
+            #middleColumn {
+                float: left;
+                width: 432px;
+                margin: 18px;
+            }
+            
+            #topRow {
+                background-color: #acf5dd;
+                width: 376px;
+                height: 190px;
+                padding: 20px;
+                border: 8px solid beige;
+                border-radius: 20px;
+                margin-bottom: 20px;
+                
+                position: relative;
+                animation-timing-function: ease;
+                animation: innerDivMove 4s;
+            }
+            
+            #bottomRow {
+                background-color: #ca9df4;
+                width: 376px;
+                height: 120px;
+                padding: 20px;
+                border: 8px solid beige;
+                border-radius: 20px;
+                
+                position: relative;
+                animation-timing-function: ease;
+                animation: innerDivMove 4s;
+            }
+            
+            .clearhack:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+             #time {
+                color: white;
+            }
+            
+            @keyframes innerDivMove {
+                from {left: 1200px;}
+                to {left: 0px;}
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <div id="navbar">
+            <a href="http://ec2-3-14-151-232.us-east-2.compute.amazonaws.com/">Kai Hua Lin</a>
+            <a href="Kl2cbColumns.html" id="active">Skills</a>
+            <a href="Kl2cbTable.html">Class Taken</a>
+            <a href="Kl2cbProjects.html">
+                Projects
+            </a>
+        </div>
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+        <div id="mainDiv" class="clearhack">
+            <H2>Skills</H2>
+            <!-- Left Column -->
+            <!-- Put left column physical width calculations here: 
+                
+                    239px -> content width
+                +    36px -> padding left 18 + padding right 18
+                +    16px -> border left 8 + border right 8
+                +    36px -> margin left 18 + margin right 18
+                - - - - - - - - - - - - - - -
+                =   327px
+
+            -->
+            <div class="leftRightColumn" id="leftColumn">
+                <h2>Languages</h2>
+                <p>--------------------------------------------</p>
+                <ul>
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>HTML, CSS</li>
+                    <li>MYSQL</li>
+                </ul>
+            </div>
+            
+            <!-- Row Wrapper. This div will contain two rows -->
+            <!--Put middle column physical width calculations here:
+
+                    432px -> content width
+                +    36px -> margin left 18 + margin right 18
+                - - - - - - - - - - - - - - - - -
+                =   468px
+
+            -->
+            <div id="middleColumn">
+                <div id="topRow">
+                    <H2>Course Work</H2>
+                    <p>---------------------------------------------------------------------</p>
+                    <ul>
+                    <li>Software Engineering</li>
+                    <li>Advenced Algorithm Design</li>
+                    <li>Object Oriented Programming/Design</li>
+                    <li>Databases</li>
+                </ul>
+                </div>
+                
+                <div id="bottomRow">
+                    <H2>Other</H2>
+                    <p>---------------------------------------------------------------------</p>
+                    <ul>
+                    <li>Research Developer Intern: Streamline Technology Company	</li>
+                </ul>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <!--Put right column physical width calculations here: 
+
+                    1092px -> content width
+                -    327px -> left column physical width
+                -    468px -> middle column physical width
+                - - - - - - - - - - - - - - - - -
+                =   297px
+
+            -->
+            <div class="leftRightColumn " id="rightColumn">
+                <H2>Technologies</H2>
+                <p>---------------------------------------</p>
+                <ul>
+                    <li>Android Studio</li>
+                    <li>SQL DBs</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+        </div>
+        <p id="time">Last updated at: 9/02/2019</p>
+    </body>
+</html>

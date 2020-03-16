@@ -1,0 +1,43 @@
+<!--
+    Name: Kai Hua Lin
+    Pawprint: kl2cb
+    Date: 10/13/2019
+    Challenge: Web Servers
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title id="nameTitle">Challenge 6: Code Editor</title>
+        
+        <script src="Kl2cbCodeEditor.js"></script>
+        
+        <style id="resultCss"></style>
+        
+		<link rel="stylesheet" type="text/css" href="Kl2cbCodeEditor.css">
+	</head>
+	<body id="mainBody"> 
+        <div id="wrapperDiv" class="clearhack">
+            <h1 id="nameH1" ondblclick="changeTitle()">Kl2cb Code Editor</h1>
+            <div id="resultDiv">
+            </div>
+            <div id="cssHtmlDiv">
+                <textarea id="cssTextArea" placeholder="CSS" ondblclick="defaultText('css')" onclick="changeColor('css')"></textarea>
+                <textarea id="htmlTextArea" placeholder="HTML" ondblclick="defaultText('html')" onclick="changeColor('html')"></textarea>
+            </div>
+            <div id="buttonDiv">
+                <button id="htmlButton" type="button" onclick="loadHtml()">
+                    HTML
+                </button>
+                <button id="cssButton" type="button" onclick="cssClick()">
+                    CSS
+                </button>
+                <button id="eraseButton" type="button" onclick="eraseClick()">
+                    Erase
+                </button>
+            </div>
+            <h4 id="headFour"><a id="portfolioLink" href="http://ec2-3-14-151-232.us-east-2.compute.amazonaws.com/">Kai Hua Lin</a></h4>
+        </div>
+	</body>
+</html>
